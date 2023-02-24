@@ -1,6 +1,8 @@
 "use client";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import Header from "../../components/Header";
+import HeaderLink from "../../components/HeaderLink";
 
 export default function Contact() {
   const router = useRouter();
@@ -12,7 +14,13 @@ export default function Contact() {
   return (
     <div>
       <h1>contact page</h1>
-      <h4>Linking page</h4>
+      <h2>Linking page</h2>
+      <br />
+
+      {/* Clinet and Server component below */}
+      <Header />
+      <HeaderLink />
+
       {/* GO HOME PAGE  */}
       <div>
         <Link href="/">Home</Link>

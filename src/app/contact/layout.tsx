@@ -1,14 +1,14 @@
 import React, { ReactNode } from "react";
 
 interface Props {
-  children?: ReactNode;
+  children: ReactNode;
   // any props that come into the component
 }
 
-export default function ContactLayout({ children, ...props }: Props) {
+export default function ContactLayout({ children }: Props) {
   return (
     <div>
-      <title>ContactLayout</title>
+      <title>Contact**Layout</title>
       {children}
     </div>
   );
