@@ -11,8 +11,11 @@ yarn dev
 # or
 pnpm dev
 ```
+## best github repo:
+Open [VERCEL GITHUB](https://github.com/vercel/commerce) git for versel
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+```
+```
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
@@ -121,3 +124,56 @@ Routes for our app
 /blog - blog home
 /blog/:title - blog post
 /contact - contact page
+
+
+Lession 3:
+Head component
+Our app needs a head component in the app directory.
+ This will hold the meta and title tags for our application.
+
+// ./app/head.tsx
+export default function Head() {
+  return (
+    <>
+      <title></title>
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+    </>
+  );
+}
+Layouts
+Layouts are components that wrap our pages. We can use them when we want to keep certain UI elements on page across routes. Things like a navigation bar, footer, layout, etc. We need to create a root layout. You must have a root layout when using the app directory.
+
+// ./app/layout.tsx
+export default function RootLayout({ children }) {
+  return (
+    <html lang="en">
+      <head />
+      <body>{children}</body>
+    </html>
+  );
+}
+Nested Layouts
+It's required to have a root layout, but we can also have multiple nested layouts that render inside each other. You simply have to create a layout file in the route folder. By default, the layouts will nest.
+
+*****************
+
+LAYOUT PAGE DON'T GET RE-RENDER EVERY TIME ON PAGE LOAD, TSX OR JS PAGE GET RELOADED
+
+*****************
+Programatic usage
+If you need to navigate between pages programmatically instead of when a user clicks. First, you must understand that this only works in client components, we'll get there later. Next.js provides a hook we can use that creates a router object for that has helpful navigation methods on it.
+
+"use client";
+
+import { useRouter } from "next/navigation";
+
+export default function Page() {
+  const router = useRouter();
+
+  return (
+    <button type="button" onClick={() => router.push("/blog")}>
+      Blog
+    </button>
+  );
+}
+****************
