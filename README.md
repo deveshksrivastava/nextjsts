@@ -14,6 +14,8 @@ pnpm dev
 ## best github repo:
 Open [VERCEL GITHUB](https://github.com/vercel/commerce) git for versel
 
+https://github.dev/vercel/commerce
+
 ```
 ```
 
@@ -177,3 +179,70 @@ export default function Page() {
   );
 }
 ****************
+
+Every thing here is server component, but need to use client component when require, navigation page, form submit etc.
+
+
+Finally, we've been talking about server components a lot, so what are they? Server components are a concept created on the React.js level. You can checkout the RFC here.
+
+
+Server components are components that never leave the server, so there is never any JavaScript that gets shipped to the client. This means that server components can't use things like hooks and client-side APIs that the browser provides. The results of rendering these components are streamed to the client and cached on a per route segment basis. By default, all components in the app directory in Next.js are server components.
+
+Server components vs SSR
+Traditional SSR is when a component is rendered on the server and the HTML is serialized and sent to the browser, not streamed. Then the client picks up and re-renders the same thing where it then takes over. So you're still shipping JS to the client.
+
+When to use Server components
+You should always just use server components until you have a need for some client side interaction or using a 3rd party lib.
+
+Next.js v13 extends the fetch API to achieve a more efficient way to fetch data from the server using Server Components. The fetch API
+
+Server Components
+// Never leave server, don't have state, async data fetching, executed on server
+
+****************************************************************
+
+Client components are the standard React components that you've come to love and know. Full access to browser APIs, hooks, state, interactivity.
+
+How to use
+We simply need to tell React that a component be a client component. Just add the 'use client' directive at the top of any component you want to be a client component.
+
+"use client";
+
+// regular component
+const ContactForm = () => {
+  const [state, setState] = useState({email: ''});
+  const handleChange = () => {
+    //....
+  }
+  const handleSubmit = () => {
+    //....
+  }
+
+  return (
+    <form onSubmit={...}>
+      <input value={state.email} onChange={handleChange}/>
+    </form>
+  )
+};
+When to use
+If your components need hooks like useState and useEffect, then they need to be a client component.
+
+
+Also, there are 3rd party components that have yet to add the "use client" directive. You will have to wrap them in your own client components.
+
+When to use client vs server components.
+Basically always use server components for all of your components unless it falls in 1 or more of these:
+
+Client Components
+// use like same you have been doing in react, but only use "use client"
+use of Client Components
+It needs interactivity and event listeners (onClick(), onChange(), etc)
+It uses State and Lifecycle Effects (useState(), useReducer(), useEffect(), etc)
+It uses browser-only APIs
+It needs custom hooks that depend on state, effects, or browser-only APIs
+It uses React Class components
+
+
+****************************************************************
+
+USE PAGE DIRECTORY FOR API CALLS
