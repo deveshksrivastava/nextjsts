@@ -57,6 +57,35 @@ Ok to proceed? (y) y
 - What import alias would you like configured? … @/*
 Creating a new Next.js app in /Users/devesh/Documents/code/nextjs/my-site.
 
+TOPICS:
+https://intro-nextjs-v2-instructions.vercel.app/
+
+TABLE OF CONTENTS
+- Welcome
+  - Introduction
+  - Overview
+- Next.js
+  - Introduction-
+  - What is Next.js
+  - Getting Started
+- Pages
+  - Defining routes
+  - Layouts and Pages
+  - Navigation
+- Rendering
+  - Server Components
+  - Client Components
+- Data Fetching
+  - Fetching data
+  - Static Params
+  - Special Pages
+  - Fetchig data
+- Styling
+  - Global and External Css
+  - Css Modules
+- Futher Learning
+  - Learn More
+
 Using npm.
 
 Initializing project with template: app
@@ -299,3 +328,5 @@ Getting data without fetch in server components is supported as well. Like when 
 
 Client components
 Until we're able to use the new use() hook from React, client data fetching is mostly the same as always. It's recommeded to use SWR or ReactQuery.
+
+
