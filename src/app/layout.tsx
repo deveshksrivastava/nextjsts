@@ -1,3 +1,4 @@
+import Link from "next/link";
 import "./globals.css";
 import Head from "./head";
 
@@ -23,6 +24,9 @@ export default function RootLayout({
           {/* header */}
           <header>
             <nav>TITLE PAGE</nav>
+            <nav>
+              <Link href={"./about"}>About</Link>
+            </nav>
           </header>
 
           {children}
