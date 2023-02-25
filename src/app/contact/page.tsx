@@ -1,4 +1,5 @@
 "use client";
+import Button from "@/components/Button";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import Header from "../../components/Header";
@@ -37,6 +38,8 @@ export default function Contact() {
       <button type="button" onClick={() => router.push("/blog")}>
         Blog - DYNAMIC ROUTING WITH CODING*
       </button>
+      {/* adding button component */}
+      <Button />
     </div>
   );
 }

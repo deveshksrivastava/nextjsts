@@ -1,9 +1,19 @@
-export default function BlobPost() {
+export default function Post() {
   return (
-    <div style={{ background: "blue", height: "100%" }}>
-      <div>
-        <div>About BlobPost </div>
-      </div>
+    <div>
+      <h1>Slug page</h1>
+      {/* <h1>{slug}</h1> */}
+      {/* <p>This is a static page with dynamic parameter {slug}</p> */}
     </div>
   );
 }
+
+// export async function getStaticPaths() {
+//   return {
+//     paths: [
+//       { params: { slug: "hello-world" } },
+//       { params: { slug: "about-us" } },
+//     ],
+//     fallback: false,
+//   };
+// }

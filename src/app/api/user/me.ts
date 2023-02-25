@@ -10,3 +10,8 @@ export default function handler(
 ) {
   res.status(200).json({ name: 'ME' })
 }
+
+// http://localhost:3000/api/hello
+export async function GET(request: Request) {
+  return new Response('Maya, Next.js!')
+}

@@ -12,3 +12,9 @@ export default function Blob() {
     </div>
   );
 }
+
+// export default function getStaticParams() {
+//   return {
+//     slug: [{ slug: "learn to slug" }, { slug: "Angular vs React" }],
+//   };
+// }
