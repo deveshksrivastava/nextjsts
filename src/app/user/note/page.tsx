@@ -1,6 +1,6 @@
 import Link from "next/link";
 import styles from "./notes.module.css";
-// import CreateNote from "./Create";
+import CreateUser from "./CreateUser";
 
 // export const dynamic = 'auto',
 //   dynamicParams = true,
@@ -11,7 +11,7 @@ import styles from "./notes.module.css";
 
 async function getUser() {
   const res = await fetch("https://jsonplaceholder.typicode.com/users", {
-    cache: "no-store", // this will refetch the data from the server every time, equavalent to getServerSide props
+    cache: "no-store", // this will refetch the data from the server every time, equivalent to getServerSide props
   });
   const data = await res.json();
 
@@ -32,7 +32,7 @@ export default async function NotesPage() {
         })}
       </div>
 
-      {/* <CreateNote /> */}
+      <CreateUser />
     </div>
   );
 }
