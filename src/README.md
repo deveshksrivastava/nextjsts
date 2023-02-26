@@ -436,3 +436,11 @@ npx tailwindcss init -p
   - Statically Typed Links (Beta): Prevent broken links with next/link and TypeScript.
   - Turbopack Improvements (Alpha): Compatibility with Webpack loaders and improved support.
   - Next.js Cache (Beta): Progressive ISR and faster re-deploys of code changes.
+
+
+  # Google font + Next 13
+  - https://medium.com/nextjs/how-to-use-font-optimizing-in-nextjs-13-7a66c450a88a
+
+
+  # Fake Api
+  https://jsonplaceholder.typicode.com/guide/

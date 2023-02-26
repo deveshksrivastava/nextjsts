@@ -2,6 +2,8 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 
+const onError = () => toast.error("You can only vote once");
+
 export default function CreateUser() {
   const [username, setUserName] = useState("");
   const [email, setEmail] = useState("");
@@ -20,8 +22,20 @@ export default function CreateUser() {
         email,
       }),
     })
-      .then((response) => response.json())
-      .then((json) => console.log(json));
+      .then((res) => {
+        console.log("res", res);
+        if (res.status === 201) {
+          router.refresh();
+          return;
+        }
+        onError();
+      })
+      .catch(() => {
+        onError();
+      })
+      .finally(() => {
+        console.log("final");
+      });
 
     setUserName("");
     setEmail("");

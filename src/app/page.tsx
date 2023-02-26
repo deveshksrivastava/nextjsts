@@ -3,12 +3,11 @@ import { Inter } from "next/font/google";
 import styles from "./page.module.css";
 import Link from "next/link";
 
-const inter = Inter({ subsets: ["latin"] });
-
 export default function Home() {
   return (
     <div>
       <h1 className="text-3xl font-bold underline">Hello, Next.js!</h1>
+      <p>I am using Montserrat font</p>
       <Link href={"contact"}>Go to Nav bar page</Link>
       <section className="relative isolate overflow-hidden bg-white py-24 px-6 sm:py-32 lg:px-8">
         <div className="bg-[radial-gradient(45rem_50rem_at_top,theme(colors.indigo.100),white)] absolute inset-0 -z-10 opacity-20"></div>
@@ -35,55 +34,62 @@ export default function Home() {
               />
               <div className="mt-4 flex items-center justify-center space-x-3 text-base">
                 <div className="font-semibold text-gray-900">Judith Black</div>
-                <svg
-                  viewBox="0 0 2 2"
-                  width="3"
-                  height="3"
-                  aria-hidden="true"
-                  className="fill-gray-900"
-                >
-                  <circle cx="1" cy="1" r="1" />
-                </svg>
+
                 <div className="text-gray-600">CEO of Workcation</div>
               </div>
             </figcaption>
           </figure>
         </div>
       </section>
-      <div className="grid grid-cols-4 gap-4">
+      <button className="flex flex-col border-2 items-center px-8 py-2 rounded-md border-green-600 bg-green-900 bg-opacity-50 hover:bg-opacity-75">
+        <span className="text-xl font-bold">Submit</span>
+      </button>
+      <div className="grid grid-cols-4 gap-4 grid-template-rows: repeat(4, minmax(0, 1fr))">
         <div>01</div>
         <div>01</div> <div>01</div> <div>01</div> <div>01</div> <div>01</div>{" "}
         <div>01</div> <div>01</div>
         <div>09</div>
       </div>
-
-      <table className="table-fixed">
-        <thead>
-          <tr>
-            <th>Song</th>
-            <th>Artist</th>
-            <th>Year</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>The Sliding Mr. Bones (Next Stop, Pottersville)</td>
-            <td>Malcolm Lockyer</td>
-            <td>1961</td>
-          </tr>
-          <tr>
-            <td>Witchy Woman</td>
-            <td>The Eagles</td>
-            <td>1972</td>
-          </tr>
-          <tr>
-            <td>Shining Star</td>
-            <td>Earth, Wind, and Fire</td>
-            <td>1975</td>
-          </tr>
-        </tbody>
-      </table>
       <img className="rotate-45 ..."></img>
+      Currently we add basic utility-friendly form styles for the following form
+      element types:
+      {/* input[type='text']
+      input[type='password']
+      input[type='email']
+      input[type='number']
+      input[type='url']
+      input[type='date']
+      input[type='datetime-local']
+      input[type='month']
+      input[type='week']
+      input[type='time']
+      input[type='search']
+      input[type='tel']
+      input[type='checkbox']
+      input[type='radio']
+      select
+      select[multiple]
+      textarea */}
+      {/* <!-- You can actually customize padding on a select element now: --> */}
+      <select className="px-4 py-3 rounded-full">
+        <option value="volvo">Volvo</option>
+        <option value="saab">Saab</option>
+      </select>
+      {/* <!-- Or change a checkbox color using text color utilities: --> */}
+      <input type="checkbox" className="rounded text-pink-500" />
+      <input
+        type="email"
+        className="form-input px-4 py-3 rounded-full"
+        placeholder="Enter email"
+      />
+      <select className="form-select px-4 py-3 rounded-full">
+        <option value="volvo">Volvo</option>
+        <option value="saab">Saab</option>
+        <option value="mercedes">Mercedes</option>
+        <option value="audi">Audi</option>
+        {/* <!-- ... --> */}
+      </select>
+      <input type="checkbox" className="form-checkbox rounded text-pink-500" />
     </div>
   );
 }
