@@ -9,18 +9,25 @@ import CreateUser from "./CreateUser";
 //   runtime = 'nodejs',
 //   preferredRegion = 'auto'
 
-async function getUser() {
+type MetadataUser = {
+  id: number;
+  username: string;
+  email: string;
+  website: string;
+}[];
+
+async function getUser(): Promise<MetadataUser> {
   const res = await fetch("https://jsonplaceholder.typicode.com/users", {
     cache: "no-store", // this will refetch the data from the server every time, equivalent to getServerSide props
   });
   const data = await res.json();
 
-  return data as any[];
+  return data;
 }
 
 export default async function NotesPage() {
   const users = await getUser();
-  console.log(users);
+  // console.log(users);
 
   return (
     <div>

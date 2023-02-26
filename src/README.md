@@ -16,6 +16,7 @@ npm run dev --turbo
 ```
 
 ## Key features for Next.js 13 
+  - https://nextjs.org/blog/next-13
 	⁃	700x faster updates than Webpack
 	⁃	Support for React Server Components
 	⁃	Optimize images on demand with next/image
@@ -27,6 +28,17 @@ npm run dev --turbo
 	⁃	New router with support for Nested layouts
 	⁃	Vercel OG Image genration
 	⁃	Increase your engagement rate next/link
+
+## Vercel
+  - Vercel is an end-to-end platform for developers, that allows you to create and deploy your web application. Vercel provides the following features to enable you to serve fast and personalized content to your users:
+
+  - Deployments - Managing your deployments is at the heart of everything Vercel does. Once you import your project, Vercel automatically handles the configuration of the build settings for your framework. Vercel also provides build logs, to help you to identify issues before you deploy to production.
+
+  - CI/CD - As you're developing a project, Vercel automatically provides a preview deployment with its own URL. The preview URL is automatically integrated with your connected Git provider and is accessible in the body of your pull request. Once your pull request is merged into the main branch, Vercel will make a Production Deployment.
+
+  - Custom domains - By default, Vercel assigns a domain to every deployment, but you can also update it to point to a custom domain. You can buy a custom domain either through Vercel or a third party, and Vercel will handle all the necessary configuration, such as DNS and SSL certificates.
+
+  - Monitoring your project - Once your site is available to users, you can use Checks, Analytics, and Usage to monitor how well your site is performing.
 
 ## best github repo:
 Open [VERCEL GITHUB](https://github.com/vercel/commerce) git for versel
@@ -414,3 +426,13 @@ npx tailwindcss init -p
 ## [slug] or [...slug] means
   - this is post/2 or post/3 will take the [slug] page.tsx
   - this is post/2/3/3/3 any thing will take to [...slug].tsx page
+
+##   Next.js 13.2 includes major improvements to the App Router (app) in preparation for stability:
+  - Built-in SEO Support: New Metadata API to set static and dynamic meta tags.
+  - Route Handlers: Custom request handlers, built on Web Request and Response.
+  - MDX for Server Components: Use React components inside Markdown, server-side only.
+  - Rust MDX Parser: Faster Markdown parsing with a brand new Rust plugin.
+  - Improved Error Overlay: Separate Next.js and React stack traces for improved readability.
+  - Statically Typed Links (Beta): Prevent broken links with next/link and TypeScript.
+  - Turbopack Improvements (Alpha): Compatibility with Webpack loaders and improved support.
+  - Next.js Cache (Beta): Progressive ISR and faster re-deploys of code changes.

@@ -30,8 +30,14 @@ export default function CreateUser() {
   };
 
   return (
-    <form onSubmit={create}>
-      <h3>Create a new Note</h3>
+    <form
+      onSubmit={create}
+      style={{
+        padding: "10px",
+      }}
+    >
+      <br />
+      <h1>Create a new Note</h1>
       <div>
         <input
           type="text"
@@ -49,7 +55,16 @@ export default function CreateUser() {
         />
       </div>
 
-      <button type="submit">Create User</button>
+      <button
+        type="submit"
+        style={{
+          backgroundColor: "lightblue",
+          border: "1px solid blue",
+          padding: "5px",
+        }}
+      >
+        Create User
+      </button>
     </form>
   );
 }
