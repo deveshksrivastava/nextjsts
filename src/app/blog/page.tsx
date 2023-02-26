@@ -1,5 +1,7 @@
 "use client";
-import { useState } from "react";
+import Reporting from "@/components/Reporting";
+import { Suspense, useState } from "react";
+import Loading from "../loadingex/loading";
 
 export default function Blob() {
   const [user, setUser] = useState("This is Clinet components");
@@ -8,6 +10,9 @@ export default function Blob() {
       <div>
         <div>About Blob : Clinet components</div>
         <h2>{user}</h2>
+        <Suspense fallback={<Loading />}>
+          <Reporting />
+        </Suspense>
       </div>
     </div>
   );

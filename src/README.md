@@ -350,4 +350,21 @@ export async function generateStaticParams() {
   }));
 }
 
+***********************
+Special Pages
+When fetching data with server components, we can use special pages provided by Next.js to handling loading and error states
 
+
+Adding a loading.tsx in the same directory as a server component page in the app directory that is fetching data will render that loading component while the data is being fetched. It is equivalent to using a Suspense boundry, which you can still do if you prefer or your server component isn't a page in the app directory.
+
+export default function Loading() {
+  return <div>...loading</div>;
+}
+
+Then same is true for error.tsx. If your server component errors out while rendering, the error page component will show instead. This is the same as wrapping a component in an Error Boundry.
+
+export default function Error() {
+  return <div>...error</div>;
+}
+
+***************
