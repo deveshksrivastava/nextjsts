@@ -10,7 +10,24 @@ npm run dev
 yarn dev
 # or
 pnpm dev
+
+#turbo pack
+npm run dev --turbo
 ```
+
+## Key features for Next.js 13 
+	⁃	700x faster updates than Webpack
+	⁃	Support for React Server Components
+	⁃	Optimize images on demand with next/image
+	⁃	Ecosystem friendly - out of box support for typescript. Jsx, css and more 
+	⁃	Streaming support - support for HTML streaming, now on Vercel
+	⁃	Custom typefaces for your brand next/font
+	⁃	4x faster cold starts than Webpack
+	⁃	Incremental by design 
+	⁃	New router with support for Nested layouts
+	⁃	Vercel OG Image genration
+	⁃	Increase your engagement rate next/link
+
 ## best github repo:
 Open [VERCEL GITHUB](https://github.com/vercel/commerce) git for versel
 
@@ -380,5 +397,16 @@ Mutations will probably happen client-side on some event like click, so use what
 Installing Tailwind
 Install the Tailwind CSS packages and run the init command to generate both the tailwind.config.js and postcss.config.js files:
 
-```npm install -D tailwindcss postcss autoprefixer
-npx tailwindcss init -p```
+```
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init -p
+```
+
+*******************
+
+## Adding data base to project
+  - Add pocketbase.exe to project
+    - [Pocketbase Link](https://pocketbase.io/docs/)
+  - https://www.youtube.com/watch?v=__mSgDEOyv8
+  - 
+
