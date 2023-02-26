@@ -1,4 +1,3 @@
-import { Suspense } from "react";
 import { getAllPosts } from "../../../lib/cms";
 
 const delay = (time: number) =>
@@ -7,8 +6,10 @@ const delay = (time: number) =>
   });
 
 export default async function ReportPage() {
+  throw new Error("oops");
   const post = delay(500);
   const posts = await getAllPosts();
+
   return (
     <>
       <div>Report APPLICATION</div>
