@@ -1,6 +1,8 @@
 import Link from "next/link";
 import "./../../styles/global.css";
 import Head from "./head";
+// These styles apply to every route in the application
+import "./globals.css";
 
 export const metadata = {
   title: "Create Next App",
