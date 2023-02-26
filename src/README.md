@@ -408,5 +408,9 @@ npx tailwindcss init -p
   - Add pocketbase.exe to project
     - [Pocketbase Link](https://pocketbase.io/docs/)
   - https://www.youtube.com/watch?v=__mSgDEOyv8
-  - 
+  - adding new get, post on the server sife
 
+
+## [slug] or [...slug] means
+  - this is post/2 or post/3 will take the [slug] page.tsx
+  - this is post/2/3/3/3 any thing will take to [...slug].tsx page
