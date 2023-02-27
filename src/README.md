@@ -444,3 +444,10 @@ npx tailwindcss init -p
 
   # Fake Api
   https://jsonplaceholder.typicode.com/guide/
+
+  # Git Lense use 
+  https://www.youtube.com/watch?v=UQPb73Zz9qk
+
+  # Server side data fetching 
+    It uses getStaticProps and getServerSideProps to fetch the server side on each page on next.js 12
+    NO need for above function we can directly fetch the server side function on any page.

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import styles from "./notes.module.css";
 import CreateUser from "./CreateUser";
+import { getUser } from "../../../../lib/get-user";
 
 // export const dynamic = 'auto',
 //   dynamicParams = true,
@@ -16,7 +17,7 @@ type MetadataUser = {
   website: string;
 }[];
 
-async function getUser(): Promise<MetadataUser> {
+async function getUserNote(): Promise<MetadataUser> {
   const res = await fetch("https://jsonplaceholder.typicode.com/users", {
     cache: "no-store", // this will refetch the data from the server every time, equivalent to getServerSide props
   });
@@ -26,19 +27,20 @@ async function getUser(): Promise<MetadataUser> {
 }
 
 export default async function NotesPage() {
-  const users = await getUser();
-  // console.log(users);
+  const users = await getUserNote();
+  const user = await getUser();
+  console.log(user);
 
   return (
     <div>
       <h1>Notes Movie list</h1>
+      The user is : {user.name}
       {/* {JSON.stringify(notes)} */}
       <div className={styles.grid}>
         {users?.map((item) => {
           return <Note key={item.id} note={item} />;
         })}
       </div>
-
       <CreateUser />
     </div>
   );
