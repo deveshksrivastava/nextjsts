@@ -1,13 +1,14 @@
 import Image from "next/image";
-import { Inter } from "next/font/google";
+// import { Inter } from "@next/font/google";
 import styles from "./page.module.css";
 import Link from "next/link";
 
+// const inter = Inter();
 export default function Home() {
   return (
     <div>
       <h1 className="text-3xl font-bold underline">Hello, Next.js!</h1>
-      <p>I am using Montserrat font</p>
+      {/* <p className={inter.className}>I am using Montserrat font</p> */}
       <Link href={"contact"}>Go to Nav bar page</Link>
       <section className="relative isolate overflow-hidden bg-white py-24 px-6 sm:py-32 lg:px-8">
         <div className="bg-[radial-gradient(45rem_50rem_at_top,theme(colors.indigo.100),white)] absolute inset-0 -z-10 opacity-20"></div>
