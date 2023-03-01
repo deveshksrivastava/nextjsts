@@ -1,7 +1,7 @@
-import Link from "next/link";
-import styles from "./notes.module.css";
-import CreateUser from "./CreateUser";
-import { getUser } from "../../../../lib/get-user";
+import Link from 'next/link';
+import styles from './notes.module.css';
+import CreateUser from './CreateUser';
+import { getUser } from '../../../../lib/get-user';
 
 // export const dynamic = 'auto',
 //   dynamicParams = true,
@@ -18,8 +18,8 @@ type MetadataUser = {
 }[];
 
 async function getUserNote(): Promise<MetadataUser> {
-  const res = await fetch("https://jsonplaceholder.typicode.com/users", {
-    cache: "no-store", // this will refetch the data from the server every time, equivalent to getServerSide props
+  const res = await fetch('https://jsonplaceholder.typicode.com/users', {
+    cache: 'no-store', // this will refetch the data from the server every time, equivalent to getServerSide props
   });
   const data = await res.json();
 

@@ -1,9 +1,9 @@
-"use client";
+'use client';
 
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
 function Header() {
-  const [data, setData] = useState("HOME");
+  const [data, setData] = useState('HOME');
   return (
     <div>
       This page is Clinet component

@@ -45,6 +45,8 @@ Open [VERCEL GITHUB](https://github.com/vercel/commerce) git for versel
 
 https://github.dev/vercel/commerce
 
+https://github.com/CodingGarden/next-travel-log learning next.js 13 beta
+
 ```
 ```
 
@@ -451,3 +453,5 @@ npx tailwindcss init -p
   # Server side data fetching 
     It uses getStaticProps and getServerSideProps to fetch the server side on each page on next.js 12
     NO need for above function we can directly fetch the server side function on any page.
+
+  ```Note : Previous versions of next.js data fetching methods such as getServerSideProps, getStaticProps and getInitialProps are not supported in new app directory```
